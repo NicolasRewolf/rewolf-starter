@@ -1,6 +1,5 @@
 import "./styles/globals.css"
-import { StatsDashboard } from "@/features/dashboard/StatsDashboard"
 
 export default function App() {
-  return <StatsDashboard />
+  return <main className="min-h-screen bg-background text-foreground" aria-label="Canvas" />
 }
