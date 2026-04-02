@@ -16,7 +16,7 @@ npm install
 
 # Add shadcn/ui components
 echo "→ shadcn/ui components..."
-npx shadcn@latest add card badge button table tabs dialog dropdown-menu tooltip sonner --yes
+npx shadcn@latest add card badge button table tabs dialog dropdown-menu tooltip --yes
 
 echo ""
 echo "✓ Setup terminé."

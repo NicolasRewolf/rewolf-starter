@@ -1,6 +1,6 @@
 import "./styles/globals.css"
-import { SeoDashboard } from "@/features/seo/SeoDashboard"
+import { StatsDashboard } from "@/features/dashboard/StatsDashboard"
 
 export default function App() {
-  return <SeoDashboard />
+  return <StatsDashboard />
 }

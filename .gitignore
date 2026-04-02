@@ -13,12 +13,11 @@ dist-ssr/
 .env.local
 .env.*.local
 
-# Google OAuth — fichiers téléchargés depuis la console (secrets)
+# Secrets often dropped locally (never commit)
 client_secret*.json
 *apps.googleusercontent.com.json
 credentials.json
 token.json
-gsc-oauth-tokens.json
 
 # Editor
 .vscode/*
