@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { ArrowUpRight, Moon, Sun, Zap, BarChart2, Layout, Type } from "lucide-react"
-import "../styles/globals.css"
+import "./styles/globals.css"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 16 },
