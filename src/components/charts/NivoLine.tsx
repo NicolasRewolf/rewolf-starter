@@ -1,10 +1,10 @@
 import { ResponsiveLine } from '@nivo/line'
-import type { LineSvgProps } from '@nivo/line'
+import type { LineSeries, LineSvgProps } from '@nivo/line'
 import { nivoTheme, nivoColors } from '@/lib/nivo-theme'
 import { cn } from '@/lib/utils'
 
-interface NivoLineProps extends Partial<Omit<LineSvgProps, 'data' | 'width' | 'height'>> {
-  data: LineSvgProps['data']
+interface NivoLineProps extends Partial<Omit<LineSvgProps<LineSeries>, 'data' | 'width' | 'height'>> {
+  data: LineSvgProps<LineSeries>['data']
   height?: number
   className?: string
   area?: boolean

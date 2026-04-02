@@ -4,14 +4,14 @@
  * Usage : import { nivoTheme } from '@/lib/nivo-theme'
  */
 
-import type { Theme } from '@nivo/core'
+import type { PartialTheme } from '@nivo/theming'
 
 function cssVar(name: string, fallback: string): string {
   if (typeof window === 'undefined') return fallback
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || fallback
 }
 
-export const nivoTheme: Theme = {
+export const nivoTheme: PartialTheme = {
   background: 'transparent',
   text: {
     fontSize: 12,
