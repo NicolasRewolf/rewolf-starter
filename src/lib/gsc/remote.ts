@@ -1,4 +1,4 @@
-import type { GscDailyRow, GscPerformanceSummary, GscProperty, GscQueryRow } from "@/data/gsc-seo-dashboard"
+import type { GscDailyRow, GscPerformanceSummary, GscProperty, GscQueryRow } from "@/data/mocks/seo-dashboard"
 
 export type GscPerformancePayload = {
   summary: GscPerformanceSummary

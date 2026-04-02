@@ -1,5 +1,5 @@
 import "./styles/globals.css"
-import { SeoDashboard } from "@/pages/SeoDashboard"
+import { SeoDashboard } from "@/features/seo/SeoDashboard"
 
 export default function App() {
   return <SeoDashboard />

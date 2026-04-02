@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "setup": "bash scripts/setup.sh",
     "dev": "vite",
     "dev:api": "tsx watch server/index.ts",
     "dev:full": "concurrently -k \"npm run dev:api\" \"npm run dev\"",

@@ -1,7 +1,7 @@
 #!/bin/bash
 # ─────────────────────────────────────────────
 # REWOLF Starter — Bootstrap Script
-# Usage: bash setup.sh
+# Usage: bash scripts/setup.sh   (depuis la racine du repo)
 # ─────────────────────────────────────────────
 
 set -e

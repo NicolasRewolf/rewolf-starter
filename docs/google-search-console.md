@@ -145,7 +145,7 @@ En Node, le package officiel **`googleapis`** simplifie tout ça (client OAuth2 
 - [Search Analytics — méthode `query`](https://developers.google.com/webmaster-tools/v1/searchanalytics/query)
 - [Bibliothèque OAuth Google](https://github.com/googleapis/google-auth-library-nodejs) (Node)
 
-Une fois le backend en place, remplace le snapshot dans `src/data/gsc-seo-dashboard.ts` par des appels `fetch` vers tes routes API.
+Une fois le backend en place, remplace le snapshot dans `src/data/mocks/seo-dashboard.ts` par des appels `fetch` vers tes routes API.
 
 ---
 

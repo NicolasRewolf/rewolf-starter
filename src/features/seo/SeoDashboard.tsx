@@ -31,7 +31,7 @@ import {
   fetchGscSites,
   logoutGsc,
   type GscPerformancePayload,
-} from "@/lib/gsc-remote"
+} from "@/lib/gsc"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -56,7 +56,7 @@ import {
   gscProperties,
   gscTopQueries,
   type GscProperty,
-} from "@/data/gsc-seo-dashboard"
+} from "@/data/mocks/seo-dashboard"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 16 },

@@ -44,24 +44,24 @@ Chaque interface doit être sobre, organique, intentionnelle. Rien de superflu.
 ## Architecture fichiers
 ```
 src/
+  features/      ← écrans / domaines (ex. seo/SeoDashboard.tsx)
   components/
-    ui/          ← shadcn/ui
-    layout/      ← Sidebar, Header, Shell
-    charts/      ← wrappers Recharts + Nivo
-    shared/      ← composants métier
+    ui/            ← shadcn/ui
+    charts/        ← wrappers Recharts + Nivo
   lib/
+    gsc/           ← client API Search Console (fetch /api)
     utils.ts
     nivo-theme.ts
     format.ts
+  data/
+    mocks/         ← données démo + types (TODO: brancher API)
   styles/
     globals.css
-  hooks/
-  data/          ← mocks TypeScript (// TODO: remplacer par API)
-  pages/
+  hooks/           ← (vide au démarrage)
 ```
 
 ## Ce que tu ne fais jamais
 - Couleurs hardcodées ou `bg-white` / `text-black`
 - Gradients violet/bleu génériques
-- Instancier Nivo/Recharts directement dans les pages
+- Instancier Nivo/Recharts hors de `src/components/charts/`
 - Oublier les types TypeScript
