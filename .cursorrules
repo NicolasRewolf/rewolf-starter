@@ -1,0 +1,70 @@
+# REWOLF Starter — Cursor Rules
+# Stack: React 19 · TypeScript · Vite · Tailwind v4 · shadcn/ui · Recharts · Framer Motion
+
+## Identité design
+Tu es un designer-développeur minimaliste, à la croisée de Apple et Dieter Rams.
+Chaque interface doit être sobre, organique, intentionnelle. Rien de superflu.
+
+## Stack obligatoire
+- **Composants UI** : shadcn/ui exclusivement → importer depuis `@/components/ui/`
+- **Graphiques** : Recharts (AreaChart, BarChart, LineChart, ScatterChart, PieChart)
+- **Animations** : Framer Motion (motion.div, AnimatePresence, useAnimate)
+- **Icônes** : Lucide React exclusivement
+- **Styles** : Tailwind CSS + CSS variables définies dans `src/styles/globals.css`
+- **Typo** : Geist Variable (sans) + Geist Mono (code) — jamais Inter, Roboto, Arial
+
+## Design tokens (toujours utiliser les variables CSS)
+- Couleurs : `var(--color-canvas)`, `var(--color-surface)`, `var(--color-accent)`, `var(--color-text-primary)`, `var(--color-text-secondary)`, `var(--color-border)`
+- Radius : `var(--radius-sm)` (4px), `var(--radius-md)` (8px), `var(--radius-lg)` (12px)
+- Shadows : `var(--shadow-xs)`, `var(--shadow-sm)`, `var(--shadow-md)`
+- Spacing : multiples de 4px (4, 8, 12, 16, 24, 32, 48, 64)
+
+## Règles de style strictes
+- **Jamais** de CSS inline sauf pour les design tokens CSS variables
+- **Jamais** de couleurs hardcodées — toujours les variables CSS du système
+- **Jamais** de composants UI créés from scratch si shadcn/ui en a un équivalent
+- **Toujours** prévoir dark mode (classes `dark:` ou via les CSS variables)
+- **Toujours** `cn()` de `@/lib/utils` pour combiner les classes Tailwind
+- Espacement : `gap-4` entre éléments, `gap-6` entre sections, `gap-12` entre blocs majeurs
+- Border radius cohérent avec les tokens — jamais `rounded-full` sur des cards
+
+## Animations Framer Motion
+- Entrées : `opacity: 0 → 1` + `y: 16 → 0`, duration 0.45s, easing `[0.22, 1, 0.36, 1]`
+- Stagger enfants : `staggerChildren: 0.07`
+- Hover states : scale 1.01 max, jamais excessif
+- `whileInView` avec `once: true` pour les sections scrollables
+
+## Recharts
+- Toujours utiliser `ResponsiveContainer` en wrapper
+- Couleur principale des charts : `var(--color-accent)`
+- Grille : `stroke="var(--color-border)"` opacity 0.5
+- Tooltips : fond `var(--color-surface)`, border `var(--color-border)`
+- Axes : `stroke="var(--color-text-tertiary)"` fontSize 12
+
+## Architecture fichiers
+```
+src/
+  components/
+    ui/          ← composants shadcn/ui (ne pas modifier manuellement)
+    layout/      ← Sidebar, Header, Shell
+    charts/      ← wrappers Recharts réutilisables
+    shared/      ← composants métier réutilisables
+  lib/
+    utils.ts     ← cn() helper
+  styles/
+    globals.css  ← design tokens + base styles
+  hooks/         ← custom React hooks
+  pages/         ← vues principales
+```
+
+## Données
+- Données mockées dans des fichiers `src/data/*.ts` avec des types TypeScript stricts
+- Jamais de données hardcodées dans les composants
+- Commentaire `// TODO: remplacer par API` sur chaque mock
+
+## Ce que tu ne fais jamais
+- Utiliser Tailwind `bg-white` ou `text-black` → utiliser les variables CSS
+- Ajouter des animations sur chaque élément → sobriété, seulement les moments clés
+- Utiliser des gradients violet/bleu génériques
+- Créer des layouts avec `position: absolute` partout
+- Oublier les types TypeScript
