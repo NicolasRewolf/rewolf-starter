@@ -1,6 +1,6 @@
 @import "@fontsource-variable/geist";
 @import "tailwindcss";
-@import "tailwindcss-animate";
+
 
 @layer base {
   :root {
